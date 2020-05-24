@@ -31,12 +31,12 @@ public class Attack3 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 currentPos = rbody.position;
+        //Vector2 currentPos = rbody.position;
 
-        inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        Vector2 movement = inputVector * 1f;
-        Vector2 newPos1 = currentPos + movement * Time.fixedDeltaTime;
-        rbody.MovePosition(newPos1);
+        //inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        //Vector2 movement = inputVector * 1f;
+        //Vector2 newPos1 = currentPos + movement * Time.fixedDeltaTime;
+        rbody.MovePosition(Vector2.MoveTowards(transform.position,player,1*Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
