@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 943607348794850102}
   - component: {fileID: 1440194046009907535}
   - component: {fileID: 50138981407604458}
-  - component: {fileID: 5114995630710216426}
+  - component: {fileID: 114251368483012342}
   m_Layer: 0
   m_Name: enemyAttack
   m_TagString: Untagged
@@ -86,7 +86,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5114995630710216426
+--- !u!114 &114251368483012342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 943607348794850103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b1869f53cceee408fd25f0468b4e7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 777a2a95d6fe87a4d9a182fc8c506564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5

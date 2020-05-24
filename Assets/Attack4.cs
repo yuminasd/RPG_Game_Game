@@ -36,7 +36,7 @@ public class Attack4 : MonoBehaviour
         //inputVector = Vector2.ClampMagnitude(inputVector, 1);
         //Vector2 movement = inputVector * 1f;
         //Vector2 newPos1 = currentPos + movement * Time.fixedDeltaTime;
-        rbody.MovePosition(Vector2.MoveTowards(transform.position,player.transform.position,1*Time.deltaTime));
+     //   rbody.MovePosition(Vector2.MoveTowards(transform.position,player.transform.position,1*Time.deltaTime));
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
