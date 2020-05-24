@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Attack3 : MonoBehaviour
+public class Attack4 : MonoBehaviour
 {
     public float timer = 0.3f;
     Rigidbody2D rbody;
@@ -13,11 +14,9 @@ public class Attack3 : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-        float horizontalInput = Mathf.Abs(player.transform.position.x) - Mathf.Abs(this.transform.position.x);
-        float verticalInput = Mathf.Abs(player.transform.position.y)-Mathf.Abs(this.transform.position.y);
-        inputVector = new Vector2(horizontalInput, verticalInput);
-
         player = GameObject.FindGameObjectWithTag("player");
+      Vector2  moveDirection = (player.transform.position - transform.position).normalized * 1f;
+        rbody.velocity = new Vector2 (moveDirection.x, moveDirection.y);
     }
 
     // Update is called once per frame
