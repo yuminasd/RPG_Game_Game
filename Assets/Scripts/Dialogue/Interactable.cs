@@ -17,19 +17,23 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        trigger.SetActive(true);
-        FindObjectOfType<IsometricPlayerMovementController>().interact = this;
-        FindObjectOfType<IsometricPlayerMovementController>().readyChat = 1;
+        if (other.CompareTag("player"))
+        {
+            trigger.SetActive(true);
+            FindObjectOfType<IsometricPlayerMovementController>().interact = this;
+            FindObjectOfType<IsometricPlayerMovementController>().readyChat = 1;
+        }
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        trigger.SetActive(false);
-        FindObjectOfType<IsometricPlayerMovementController>().readyChat = 0;
-        FindObjectOfType<IsometricPlayerMovementController>().interact = null;
-
+        if (collision.CompareTag("player"))
+        {
+            trigger.SetActive(false);
+            FindObjectOfType<IsometricPlayerMovementController>().readyChat = 0;
+            FindObjectOfType<IsometricPlayerMovementController>().interact = null;
+        }
     }
 
 

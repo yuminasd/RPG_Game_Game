@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.WSA.Input;
 
 public class IsometricPlayerMovementController : MonoBehaviour
@@ -9,6 +10,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public float movementSpeed = 1f;
     IsometricCharacterRenderer isoRenderer;
 
+    public int health = 3;
     public int isChatting=0;
     public int readyChat = 0;
     public Interactable interact = null;
@@ -86,6 +88,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
             {
                 dialogueManager.DisplayNextSentence();
             }
+        }
+
+        if (health ==0)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 

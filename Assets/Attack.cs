@@ -37,8 +37,12 @@ public class Attack : MonoBehaviour
     {
         if (collision.CompareTag("enemy"))
         {
-            Debug.Log("Ur mom");
             collision.GetComponent<EnemyMovement>().health--;
+        }
+
+        if (collision.CompareTag("enemy2"))
+        {
+            collision.GetComponent<enemyMovement2>().health--;
         }
     }
 }
