@@ -40,9 +40,11 @@ public class Attack4 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("player"))
-        {
-            collision.GetComponent<EnemyMovement>().health--;
-        }
+            if (collision.CompareTag("player"))
+            {
+                collision.GetComponent<IsometricPlayerMovementController>().health--;
+                Object.Destroy(this.gameObject);
+            }
+
     }
 }
